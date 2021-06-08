@@ -1,0 +1,246 @@
+:root {
+	--fondo: #141414;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding-bottom: 10px ;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Slider ----- ----- ----- */
+
+
+.peliculas-recomendadas .contenedor-slider {
+	width: 100%;
+	padding: 50px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-slider .slider {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-slider .slider .pelicula {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-slider .slider .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-slider .slider .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-slider {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-slider .slider {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+* {
+	margin: 0;
+	padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+  
+  }
+  
+  .header .hero {
+	height: 67vh;
+	background: url('https://i.blogs.es/c76165/carteles-cine-terror/1366_2000.jpg') no-repeat center center/cover;
+  }
+  
+  .header .hero .logo {
+	width: 13%;
+	position: relative;
+	top: 25px;
+	left: 40px;
+  }
+  
+  .header .hero .signin {
+	background-color: #000;
+	width: 450px;
+	color: #fff;
+	margin: 40px auto;
+	padding: 70px;
+  }
+  
+  .header .hero .signin h2 {
+	margin: 0 0 25px;
+	font-size: 30px;
+  }
+  
+  .header .hero .signin input {
+	display: block;
+	color: #fff;
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
+  }
+  
+  .header .hero .signin input[type='text'], .header .hero .signin input[type='password'] {
+	background-color: #353535;
+	font-size: 15px;
+	outline: none;
+	margin-bottom: 20px;
+	padding: 0 20px;
+  }
+  
+  .header .hero .signin input[type='text']::placeholder, .header .hero .signin input[type='password']::placeholder {
+	color: #949494;
+	font-size: 16px;
+  }
+  
+  .header .hero .signin input[type='submit'] {
+	background-color: red;
+	font-size: 16px;
+	margin-top: 40px;
+	cursor: pointer;
+  }
+  
+  
+  .header .hero .signin .footer-signin {
+	margin-top: 30px;
+  }
+  
+  .header .hero .signin .footer-signin .login {
+	text-decoration: none;
+	color: #727272;
+	font-size: 13px;
+  }
+  
+  
+  .header .hero .signin .footer-signin .new {
+	margin-top: 12px;
+	font-size: 17px;
+	color: #727272;
+	font-weight: lighter;
+  }
+  
+  .header .hero .signin .footer-signin .new a {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 5px;
+  }
+  
+  .btn-icon {
+	  margin-top: 10%;
+	  font-size: 17px;
+	  color: red;
+	  text-decoration:none;
+	  
+  }

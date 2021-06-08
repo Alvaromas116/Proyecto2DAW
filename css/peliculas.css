@@ -191,6 +191,7 @@ main{
     border-radius: 50px;
     padding: 10px 20px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .overlay {
