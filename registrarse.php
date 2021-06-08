@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    <link href="/./fontawesome/css/all.css" rel="stylesheet">
-    <link rel="icon" sizes="32x32" href="/./imagenes/principal/p.png">
-    <link rel="stylesheet" href="/./css/registrarse.css">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="icon" sizes="32x32" href="imagenes/principal/p.png">
+    <link rel="stylesheet" href="css/registrarse.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" media="screen" />
 
     <title>Pelismedia</title>
 </head>
@@ -17,7 +16,7 @@
     <header>
         <header class="header">
             <div class="hero">
-                <img src="/./imagenes/principal/pelismedia.png" class="logo">
+                <img src="imagenes/principal/pelismedia.png" class="logo">
 
                 <div class="signin">
                     <form>
@@ -36,9 +35,9 @@
 
 
                     <div class="footer-signin">
-                        <p class="new">¿Ya tienes cuenta?<a href="/./login/login.html">Iniciar sesión</a>.</p>
+                        <p class="new">¿Ya tienes cuenta?<a href="login.php">Iniciar sesión</a>.</p>
 
-                        <i class="fas fa-chevron-left btn-icon"></i><a href="/./principal/principal.html" class="btn-icon"></i> Volver
+                        <i class="fas fa-chevron-left btn-icon"></i><a href="index.php" class="btn-icon"></i> Volver
                             atrás</a>
                     </div>
                 </div>
@@ -54,7 +53,7 @@
             </div>
             <div class="contenedor-slider">
                 <div class="slider">
-                    <img src="/./imagenes/Login/Slider/1.jpg" name="slider" width="100%" height="auto">
+                    <img src="imagenes/Login/Slider/1.jpg" name="slider" width="100%" height="auto">
                 </div>
             </div>
         </div>
@@ -62,7 +61,8 @@
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/./javascript/registrarse.js"></script>
+    <script src="javascript/jquery.fancybox.min.js"></script>
+    <script src="javascript/registrarse.js"></script>
 </body>
 
 </html>
