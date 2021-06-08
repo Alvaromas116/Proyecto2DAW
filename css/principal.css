@@ -74,12 +74,13 @@ img {
 }
 
 .vista-top img {
-	width: 250px;
+	width: 230px;
 	position: absolute;
 	top: 35%;
 	left: 5%;
 	transform: translate(0);
-	margin-left: 0;
+	margin-left: 5%;
+	
 }
 
 .vista-content {
@@ -92,7 +93,7 @@ img {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 9rem;
+	margin-top: 5rem;
 }
 
 .vista::after {
@@ -286,6 +287,7 @@ img {
 	margin: auto;
 	overflow: hidden;
 	padding: 0 2rem;
+	
 }
 
 .imagenes-cont2 {
@@ -351,6 +353,7 @@ img {
 	font-size: 1rem;
 	padding: 1.2rem 1.6rem;
 	text-transform: uppercase;
+	
 }
 
 .btn-lg {
@@ -409,15 +412,17 @@ img {
 @media (min-width: 1300px) {
 
 	.vista {
-		height: 93vh;
+		height: 95vh;
 	}
 	.hide-sm {
 		display: block;
 	}
 	.vista-top img {
+		width: 350px;
 		top: 107%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		margin-left: 0;
 	}
 	.texto-descripcion {
 		font-size: 1.8rem;
@@ -430,11 +435,12 @@ img {
 		box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
 	}
 	.vista-content h1 {
-		font-size: 5.2rem;
+		padding-top: 10%;
+		font-size: 3.5rem;
 		line-height: 1.1;
 	}
 	.vista-content p {
-		font-size: 1.9rem;
+		font-size: 1.7rem;
 	}
 	#tab-1-content .tab-1-content-inner {
 		grid-template-columns: repeat(2, 1fr);
