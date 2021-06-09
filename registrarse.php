@@ -28,7 +28,7 @@ require("conexion.php");
                     <form method="post">
                     <h2>Registrarse</h2>
 
-                         <input type="text" name="email" placeholder="Introduce el correo electrónico">
+                        <input type="text" name="email" placeholder="Introduce el correo electrónico">
 
                         <input type="text" name="nombre" placeholder="Introduce el nombre de usuario">
                  
