@@ -42,5 +42,10 @@
             include("principal.php");
 			
         }
+        if($pagina=="listado"){
+			
+            include("listado.php");
+			
+        }
 		
     ?>
