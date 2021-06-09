@@ -78,7 +78,7 @@ require("conexion.php");
 
 
                         <i class="fas fa-chevron-left btn-icon"></i><a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=principal" class="btn-icon"></i> Volver
-                            atrás</a>
+                            al inicio</a>
                     </div>
                 </div>
             </div>

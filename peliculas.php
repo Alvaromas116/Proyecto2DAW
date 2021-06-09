@@ -38,11 +38,10 @@ if (isset($_SESSION['id'])) {
         <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=principal"><img src="imagenes/principal/pelismedia.png" /></a>
         <nav>
     <ul>
-        <li><a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=chat" class="current">CHAT</a></li>
         <?php
         if (isset($_SESSION['email'])) {
             echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=logout>LOGOUT</a></li>";
-            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=modiUsr>MODI USUARIO</a></li>";
+            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=modificar>MODI USUARIO</a></li>";
         } else {
             echo  "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=login>LOGIN</a></li>";
             echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=crear>CREAR USUARIO</a></li>";
@@ -52,6 +51,17 @@ if (isset($_SESSION['id'])) {
 
     </ul>
 </nav>
+<?php
+        if (isset($_SESSION['email'])) {
+
+            echo "<h1>Bienvenido " . $nombre . "</h1>";
+            echo "<h2></h2>";
+        } else {
+            echo "<h1>Desconectado. Haz LOGIN para chatear.</h1>";
+            echo "<h2></h2>";
+        }
+
+        ?>
 
             <form id="form">
                 <input type="text" placeholder="Buscar" id="buscar" class="buscar">
