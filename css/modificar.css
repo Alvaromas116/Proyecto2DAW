@@ -1,4 +1,3 @@
-
 :root {
 	--fondo: #141414;
 }
@@ -15,64 +14,6 @@ body {
 
 header {
 	padding-bottom: 10px ;
-}
-
-/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
-.contenedor-titulo-controles {
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-}
-
-.contenedor-titulo-controles h3 {
-	color: #fff;
-	font-size: 30px;
-}
-
-.contenedor-titulo-controles .indicadores button {
-	background: #fff;
-	height: 3px;
-	width: 10px;
-	cursor: pointer;
-	border: none;
-	margin-right: 2px;
-}
-
-.contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button.activo {
-	background: red;
-}
-
-
-/* ---- ----- ----- Slider ----- ----- ----- */
-
-
-.peliculas-recomendadas .contenedor-slider {
-	width: 100%;
-	padding: 50px 0;
-	overflow: hidden;
-	scroll-behavior: smooth;
-}
-
-.peliculas-recomendadas .contenedor-slider .slider {
-	display: flex;
-	flex-wrap: nowrap;
-}
-
-.peliculas-recomendadas .contenedor-slider .slider .pelicula {
-	min-width: 20%;
-	transition: .3s ease all;
-	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
-}
-
-.peliculas-recomendadas .contenedor-slider .slider .pelicula.hover {
-	transform: scale(1.2);
-	transform-origin: center;
-}
-
-.peliculas-recomendadas .contenedor-slider .slider .pelicula img {
-	width: 100%;
-	vertical-align: top;
 }
 
 
@@ -119,7 +60,7 @@ header {
   
   .header .hero .signin {
 
-	background-color: #000;
+	background-color:rgba(0,0,0, .9);
 	width: 450px;
 	color: #fff;
 	margin: 40px auto;

@@ -119,7 +119,7 @@ header {
   
   .header .hero .signin {
 
-	background-color: #000;
+	background-color: rgba(0,0,0, .9);
 	width: 450px;
 	color: #fff;
 	margin: 40px auto;

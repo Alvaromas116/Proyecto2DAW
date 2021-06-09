@@ -50,7 +50,14 @@ img {
 .hide-sm {
 	display: none;
 }
-
+#trabajo{
+	display: none;
+	float: left ;
+	color: white;
+	margin: 2%;
+	font-size: 13px;
+	
+}
 /* Vistas */
 
 .vista {
@@ -468,5 +475,10 @@ img {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20rem;
+	}
+	#trabajo{
+		display: block;
+		
+		
 	}
 }

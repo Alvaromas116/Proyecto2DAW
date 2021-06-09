@@ -40,11 +40,11 @@ if (isset($_SESSION['id'])) {
     <ul>
         <?php
         if (isset($_SESSION['email'])) {
-            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=logout>LOGOUT</a></li>";
-            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=modificar>MODI USUARIO</a></li>";
+            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=logout>Cerrar Sesión</a></li>";
+            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=modificar>Modificar Usuario</a></li>";
         } else {
-            echo  "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=login>LOGIN</a></li>";
-            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=crear>CREAR USUARIO</a></li>";
+            echo  "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=login>Iniciar Sesión</a></li>";
+            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=principal>Volver al Inicio</a></li>";
         }
 
         ?>

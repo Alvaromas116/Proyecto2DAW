@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Link muy útil que permite recargar la página y poder modificar css -->
+    <link rel="stylesheet" href="css/principal.css?php echo(rand()); ?>" />
+    <script src="javascript/principal.js?php echo(rand()); ?>"></script>
     <link rel="icon" sizes="32x32" href="imagenes/principal/p.png">
     <link rel="stylesheet" href="css/principal.css">
     <link href="fontawesome/css/all.css" rel="stylesheet">
@@ -16,6 +19,7 @@
 
     <header class="vista">
         <div class="vista-top">
+        <p id="trabajo" class="">Álvaro Mas García</p>
             <img src="imagenes/principal/pelismedia.png" />
             <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=login" class="btn btn-rounded">Iniciar sesión</a>
         </div>
@@ -180,5 +184,6 @@
     </footer>
 </body>
 <script src="javascript/principal.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </html>

@@ -1,5 +1,6 @@
 :root {
 	--fondo: #141414;
+	
 }
 
 body {
@@ -156,7 +157,7 @@ header {
   }
   
   .header .hero .login {
-	background-color: #000;
+	background-color: rgba(0,0,0, 0.9);;
 	width: 450px;
 	color: #fff;
 	margin: 40px auto;

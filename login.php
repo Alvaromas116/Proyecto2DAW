@@ -96,9 +96,6 @@ if (isset($_POST['login'])) {
 						}
 					}
 					?>
-
-
-
 					<div class="footer-login">
 						<p class="new">¿Nuevo en Pelismedia?<a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=registrarse">Registrarse</a>.</p>
 

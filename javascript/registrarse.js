@@ -1,41 +1,3 @@
-const fila = document.querySelector('.contenedor-slider');
-const peliculas = document.querySelectorAll('.pelicula');
-
-
-
-
-// ? ----- ----- Paginacion ----- -----
-const numeroPaginas = Math.ceil(peliculas.length / 5);
-for (let i = 0; i < numeroPaginas; i++) {
-	const indicador = document.createElement('button');
-
-	if (i === 0) {
-		indicador.classList.add('activo');
-	}
-
-	document.querySelector('.indicadores').appendChild(indicador);
-	indicador.addEventListener('click', (e) => {
-		fila.scrollLeft = i * fila.offsetWidth;
-
-		document.querySelector('.indicadores .activo').classList.remove('activo');
-		e.target.classList.add('activo');
-	});
-}
-
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
-
-fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-});
 /*Con este script he creado el slider justo debajo del formulario*/
 window.addEventListener('load', function () {
     console.log("funciona")
@@ -67,27 +29,5 @@ window.addEventListener('load', function () {
     }
     setInterval(cambiarImagenes, tiempo);
 });
-
-
-// ? ----- ----- FancyBox  BORRAR  ----- ----- 
-
-
-
-
-
-$(document).ready(function () {
-	$('.fancybox').fancybox({ keyboard: true });
-
-});
-
-(function (i, s, o, g, r, a, m) {
-	i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-		(i[r].q = i[r].q || []).push(arguments)
-	}, i[r].l = 1 * new Date(); a = s.createElement(o),
-		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', 'UA-74824848-1', 'auto');
-ga('send', 'pageview');
-
 
 
