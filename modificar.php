@@ -59,11 +59,9 @@ if (isset($_POST['modificar'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/modificar.css?v=<?php echo(rand()); ?>" />
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="icon" sizes="32x32" href="imagenes/principal/p.png">
-    <link rel="stylesheet" href="css/registrarse.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" media="screen" />
+    <link rel="stylesheet" href="css/modificar.css">
 
     <title>Pelismedia</title>
 </head>
@@ -78,9 +76,9 @@ if (isset($_POST['modificar'])) {
                     <form action="index.php?p=modificar" method="post">
                         <h2>Modificar</h2>
 
-                        <input type="text" name="nombre" maxlength="10" size="10" value="<?php echo $nombre ?>" placeholder="Introduce el nombre de usuario">
-
                         <input type="text" name="email" maxlength="30" value="<?php echo $email ?>" placeholder="Introduce el correo electrónico">
+
+                        <input type="text" name="nombre" maxlength="10" size="10" value="<?php echo $nombre ?>" placeholder="Introduce el nombre de usuario">
 
                         <input type="password" name="pass" maxlength="10" value="" placeholder="Introduce nueva contraseña">
 
@@ -117,7 +115,7 @@ if (isset($_POST['modificar'])) {
             </div>
         </header>
     </header>
-   
-</body>
+                    
+
 
 </html>

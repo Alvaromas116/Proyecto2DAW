@@ -29,7 +29,7 @@ if (isset($_SESSION['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Link muy útil que permite recargar la página y poder modificar css -->
+    <!-- Link muy útil que permite recargar la página y poder modificar css -->
     <link rel="stylesheet" href="css/principal.css?php echo(rand()); ?>" />
     <link rel="icon" sizes="32x32" href="imagenes/principal/p.png">
     <link rel="stylesheet" href="css/principal.css">
@@ -44,26 +44,28 @@ if (isset($_SESSION['id'])) {
     <header class="vista">
         <div class="vista-top">
             <img src="imagenes/principal/pelismedia.png" />
+            <?php
+            $ahora = time();
+            echo "<h6>" .date("h:i", $ahora) . "<h6 />";
+            ?>
 
             <?php
-                    if (isset($_SESSION['email'])) {
-                        echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=logout class='btn btn-rounded'>Cerrar Sesión</a></li>";
-                        
-                    } else {
-                        echo  "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=login class='btn btn-rounded'>Iniciar Sesión </a></li>";
-                    }
+            if (isset($_SESSION['email'])) {
+                echo "<a href=" . $_SERVER['PHP_SELF'] . "?p=logout class='btn btn-rounded'>Cerrar Sesión</a>";
+            } else {
+                echo  "<a href=" . $_SERVER['PHP_SELF'] . "?p=login class='btn btn-rounded'>Iniciar Sesión </a>";
+            }
 
-                    ?>
-                    
-            
+            ?>
+
+
         </div>
         <div class="vista-content">
             <h1>Todos los trailers de las películas y <br> series que desees
                 y más</h1>
             <p>Disfruta donde quieras y cuando quieras</p>
 
-            <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=peliculas" class="btn btn-xl">Acceder a Pelismedia<i
-                    class="fas fa-chevron-right btn-icon"></i></a>
+            <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=peliculas" class="btn btn-xl">Acceder a Pelismedia<i class="fas fa-chevron-right btn-icon"></i></a>
         </div>
     </header>
 
@@ -103,8 +105,7 @@ if (isset($_SESSION['id'])) {
                         </p>
                         <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=peliculas" class="btn btn-lg">Acceder a Pelismedia</a>
                     </div>
-                    <img
-                        src="https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/58402b605cafe8877e8b456c/peliculas.jpg" />
+                    <img src="https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/58402b605cafe8877e8b456c/peliculas.jpg" />
                 </div>
             </div>
 
@@ -167,9 +168,9 @@ if (isset($_SESSION['id'])) {
                     <tbody>
 
                         <tr>
-                            <td>Buscar</td>
+                            <td>Buscar películas</td>
                             <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-times"></i></td>
 
                         </tr>
                         <tr>
@@ -187,9 +188,10 @@ if (isset($_SESSION['id'])) {
                     </tbody>
                 </table>
                 <div class="text-center">
-                
-                <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=registrarse" class="btn btn-lg">REGISTRARSE</a><p></p>
-                <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=listado" class="btn btn-lg">Generar Listado de usuarios</a>
+
+                    <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=registrarse" class="btn btn-lg">REGISTRARSE</a>
+                    <p></p>
+                    <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=listado" class="btn btn-lg">Generar Listado de usuarios</a>
                 </div>
             </div>
         </div>
@@ -208,8 +210,7 @@ if (isset($_SESSION['id'])) {
 
             <ul>
                 <li>Síguenos en nuestras redes sociales para estar al tanto:</li>
-                <li><i class="fab fa-facebook"></i><a href="facebook.com/pelismedia"> fb.com/pelismedia </a> <i
-                        class="fab fa-twitter"></i><a href="twitter.com/pelismedia"> tw.com/pelismedia</a></li>
+                <li><i class="fab fa-facebook"></i><a href="facebook.com/pelismedia"> fb.com/pelismedia </a> <i class="fab fa-twitter"></i><a href="twitter.com/pelismedia"> tw.com/pelismedia</a></li>
 
 
             </ul>

@@ -41,7 +41,8 @@ if (isset($_SESSION['id'])) {
                 <input type="text" placeholder="Buscar" id="buscar" class="buscar">
 
             </form>
-            <img src="imagenes/principal/pelismedia.png" />
+             
+            <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=principal"> <img src="imagenes/principal/pelismedia.png" /></a>
             <nav>
                 <ul>
                     <?php

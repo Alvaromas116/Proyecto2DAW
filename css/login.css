@@ -146,7 +146,7 @@ header {
   
   .header .hero {
 	height: 73vh;
-	background: url('https://i.blogs.es/c76165/carteles-cine-terror/1366_2000.jpg') no-repeat center center/cover;
+	background: url('https://i.blogs.es/c76165/carteles-cine-terror/1366_2000.jpg') no-repeat center center/cover fixed;
   }
   
   .header .hero .logo {

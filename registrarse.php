@@ -27,9 +27,10 @@ require("conexion.php");
                 <div class="signin">
                     <form method="post">
                     <h2>Registrarse</h2>
+
+                         <input type="text" name="email" placeholder="Introduce el correo electrónico">
+
                         <input type="text" name="nombre" placeholder="Introduce el nombre de usuario">
-                     
-                        <input type="text" name="email" placeholder="Introduce el correo electrónico">
                  
                         <input type="password" name="pass"placeholder="Introduce la contraseña">
 
