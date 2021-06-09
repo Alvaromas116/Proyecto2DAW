@@ -2,7 +2,7 @@
 $servidor="localhost";
 $usuario="root";
 $password="";
-$bd="pelismedia";
+$bd="chat";
 
 function conectarBD(){
   global $servidor,$usuario,$password,$bd;
@@ -29,7 +29,7 @@ Class Conexion{
 		$server="localhost";
 		$usr="root";
 		$pass="";
-		$bd="pelismedia";
+		$bd="chat";
 		$mysqli = new mysqli($server, $usr, $pass, $bd); 
 		if ($mysqli->connect_errno) { 
 			echo "Error: Fallo al conectarse a MySQL debido a: \n"; 

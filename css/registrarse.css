@@ -1,3 +1,4 @@
+
 :root {
 	--fondo: #141414;
 }
@@ -105,7 +106,7 @@ header {
   }
   
   .header .hero {
-	height: 82vh;
+	height: 90vh;
 	background: url('https://i.blogs.es/c76165/carteles-cine-terror/1366_2000.jpg') no-repeat center center/cover;
   }
   
@@ -155,7 +156,9 @@ header {
   .header .hero .signin input[type='submit'] {
 	background-color: red;
 	font-size: 16px;
-	margin-top: 40px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
 	cursor: pointer;
   }
   

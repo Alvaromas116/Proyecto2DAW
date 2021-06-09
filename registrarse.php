@@ -1,3 +1,10 @@
+<?php
+
+require("conexion.php");
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,25 +26,59 @@
                 <img src="imagenes/principal/pelismedia.png" class="logo">
 
                 <div class="signin">
-                    <form>
-                        <h2>Registrarse</h2>
+                    <form method="post">
+                    <h2>Registrarse</h2>
+                        <input type="text" name="nombre" placeholder="Introduce el nombre de usuario">
+                     
+                        <input type="text" name="email" placeholder="Introduce el correo electrónico">
+                 
+                        <input type="password" name="pass"placeholder="Introduce la contraseña">
 
-                        <input type="text" name="name" id="name" placeholder="Introduce el correo electrónico"
-                            autocomplete="off">
-                        <input type="text" name="name" id="name" placeholder="Introduce el correo electrónico"
-                            autocomplete="off">
+                        <input type="password" name="pass2" id="password" placeholder="Repite la contraseña">
+                        
+                        <h6>*Es obligatorio completar todos los campos</h6>
 
-                        <input type="password" name="password" id="password" placeholder="Introduce la contraseña">
-                        <input type="password" name="password" id="password" placeholder="Repite la contraseña">
-
-                        <input type="submit" value="Registrarse">
+                        <input type="submit" name="Registrarse" value="Registrarse">
                     </form>
+                    <?php
+                    $nombre = "";
+                    $email = "";
+                    $pass = "";
+                    $pass2 = "";
+                    if (isset($_POST['Registrarse'])) {
+                        if (strlen($_POST['nombre']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['pass']) >= 1 && strlen($_POST['pass']) == strlen($_POST['pass2'])) {
+                            $nombre = trim($_POST['nombre']);
+                            $email = trim($_POST['email']);
+                            $pass = trim($_POST['pass']);
+                            $pass2 = trim($_POST['pass2']);
+                            if ($email != correoCorrecto($email)) {
+                                echo "<p>Email Incorrecto<p>";
+                            } else {
+                                $conex = mysqli_connect("localhost", "root", "", "chat");
+                                $consulta = "INSERT INTO usuarios(nombre, email, pass) VALUES ('$nombre','$email','$pass')";
+                                $resultado = mysqli_query($conex, $consulta);
+                                header("Location:index.php?p=login");
+                            }
+                        } else {
+                            echo "<p>Hay campos incorrectos<p>";
+                        }
+                    }
+
+                    function correoCorrecto($str)
+                    {
+                        if (preg_match('/^[(a-z0-9\_\-\.)]+@[(a-z0-9\_\-\.)]+\.[(a-z)]{2,15}$/i', $str))
+                            return true;
+                        else
+                            return false;
+                    }
+                    ?>
 
 
                     <div class="footer-signin">
-                        <p class="new">¿Ya tienes cuenta?<a href="login.php">Iniciar sesión</a>.</p>
+                        <p class="new">¿Ya tienes cuenta?<a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=login">Iniciar sesión</a>.</p>
 
-                        <i class="fas fa-chevron-left btn-icon"></i><a href="index.php" class="btn-icon"></i> Volver
+
+                        <i class="fas fa-chevron-left btn-icon"></i><a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=principal" class="btn-icon"></i> Volver
                             atrás</a>
                     </div>
                 </div>
@@ -59,8 +100,7 @@
         </div>
 
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="javascript/jquery.fancybox.min.js"></script>
     <script src="javascript/registrarse.js"></script>
 </body>

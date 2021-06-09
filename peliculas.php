@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="vista-top">
-            <a  href="index.php"><img src="imagenes/principal/pelismedia.png" /></a>
+        <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=principal"><img src="imagenes/principal/pelismedia.png" /></a>
             <form id="form">
                 <input type="text" placeholder="Buscar" id="buscar" class="buscar">
             </form>
