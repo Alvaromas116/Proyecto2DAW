@@ -1,3 +1,28 @@
+<?php
+session_start();
+require("conexion.php");
+$conexion = conectarBD();
+
+if (isset($_SESSION['email'])) {
+
+    $email = $_SESSION['email'];
+} else {
+    $email = "";
+}
+if (isset($_SESSION['nombre'])) {
+    $nombre = $_SESSION['nombre'];
+} else {
+    $nombre = "";
+}
+
+if (isset($_SESSION['id'])) {
+    $id = $_SESSION['id'];
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +44,18 @@
     <header class="vista">
         <div class="vista-top">
             <img src="imagenes/principal/pelismedia.png" />
-            <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=login" class="btn btn-rounded">Iniciar sesión</a>
+
+            <?php
+                    if (isset($_SESSION['email'])) {
+                        echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=logout class='btn btn-rounded'>Cerrar Sesión</a></li>";
+                        
+                    } else {
+                        echo  "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=login class='btn btn-rounded'>Iniciar Sesión </a></li>";
+                    }
+
+                    ?>
+                    
+            
         </div>
         <div class="vista-content">
             <h1>Todos los trailers de las películas y <br> series que desees

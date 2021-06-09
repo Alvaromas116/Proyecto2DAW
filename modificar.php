@@ -118,8 +118,6 @@ if (isset($_POST['modificar'])) {
         </header>
     </header>
    
-
-    <script src="javascript/registrarse.js"></script>
 </body>
 
 </html>
