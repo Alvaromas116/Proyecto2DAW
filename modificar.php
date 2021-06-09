@@ -59,8 +59,7 @@ if (isset($_POST['modificar'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/mi_estilo.css?v=<?php echo(rand()); ?>" />
-    <script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
+    <link rel="stylesheet" href="/css/modificar.css?v=<?php echo(rand()); ?>" />
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="icon" sizes="32x32" href="imagenes/principal/p.png">
     <link rel="stylesheet" href="css/registrarse.css">
@@ -120,9 +119,6 @@ if (isset($_POST['modificar'])) {
     </header>
    
 
-    <main>
-
-    </main>
     <script src="javascript/registrarse.js"></script>
 </body>
 
