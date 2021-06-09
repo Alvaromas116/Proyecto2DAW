@@ -150,7 +150,7 @@
                 </table>
                 <div class="text-center">
                 
-                <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=login" class="btn btn-lg">INICIAR SESIÓN</a><p></p>
+                <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=registrarse" class="btn btn-lg">REGISTRARSE</a><p></p>
                     <a href="#" class="btn btn-lg">Generar Listado de usuarios</a>
                 </div>
             </div>

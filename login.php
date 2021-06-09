@@ -1,8 +1,6 @@
 <?php
-
-require("conexion.php");
 session_start();
-
+require("conexion.php");
 $email = "";
 $pass = "";
 
@@ -36,9 +34,9 @@ if (isset($_POST['login'])) {
 		$_SESSION['email'] = $email;
 		$_SESSION['nombre'] = $nom;
 		$_SESSION['id'] = $id;
-
 		header("Location:index.php?p=peliculas");
 		exit;
+		
 	} else {
 		
 		$log[3] = "Los datos son incorrectos";

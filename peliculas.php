@@ -1,3 +1,26 @@
+<?php
+session_start();
+require("conexion.php");
+$conexion = conectarBD();
+
+if (isset($_SESSION['email'])) {
+
+    $email = $_SESSION['email'];
+} else {
+    $email = "";
+}
+if (isset($_SESSION['nombre'])) {
+    $nombre = $_SESSION['nombre'];
+} else {
+    $nombre = "";
+}
+
+if (isset($_SESSION['id'])) {
+    $id = $_SESSION['id'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,23 @@
     <header>
         <div class="vista-top">
         <a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=principal"><img src="imagenes/principal/pelismedia.png" /></a>
+        <nav>
+    <ul>
+        <li><a href="<?php echo $_SERVER['PHP_SELF'] ?>?p=chat" class="current">CHAT</a></li>
+        <?php
+        if (isset($_SESSION['email'])) {
+            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=logout>LOGOUT</a></li>";
+            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=modiUsr>MODI USUARIO</a></li>";
+        } else {
+            echo  "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=login>LOGIN</a></li>";
+            echo "<li><a href=" . $_SERVER['PHP_SELF'] . "?p=crear>CREAR USUARIO</a></li>";
+        }
+
+        ?>
+
+    </ul>
+</nav>
+
             <form id="form">
                 <input type="text" placeholder="Buscar" id="buscar" class="buscar">
             </form>

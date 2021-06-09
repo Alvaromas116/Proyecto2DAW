@@ -32,9 +32,9 @@
 			
         }
 
-        if($pagina=="cerrar"){
+        if($pagina=="logout"){
 			
-            include("cerrar.php");
+            include("logout.php");
 			
         }
         if($pagina=="principal"){

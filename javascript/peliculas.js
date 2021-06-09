@@ -195,7 +195,7 @@ function getMovies(url) {
             tagsEl.scrollIntoView({behavior : 'smooth'})
 
         }else{
-            main.innerHTML= `<h1 class="no-results">No Results Found</h1>`
+            main.innerHTML= `<h1 class="no-results">No se han encontrado resultados</h1>`
         }
        
     })
@@ -278,7 +278,7 @@ function openNav(movie) {
         activeSlide=0;
         showVideos();
       }else{
-        overlayContent.innerHTML = `<h1 class="no-results">No Results Found</h1>`
+        overlayContent.innerHTML = `<h1 class="no-results">No se han encontrado resultados</h1>`
       }
     }
   })
