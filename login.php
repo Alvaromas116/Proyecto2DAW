@@ -69,8 +69,7 @@ if (isset($_POST['login'])) {
 
 <body>
 	<header>
-		<header class="header">
-			<div class="hero">
+			<div class="caja">
 				<img src="imagenes/principal/pelismedia.png" class="logo">
 
 				<div class="login">
@@ -105,7 +104,6 @@ if (isset($_POST['login'])) {
 				</div>
 			</div>
 		</header>
-	</header>
 
 	<main>
 

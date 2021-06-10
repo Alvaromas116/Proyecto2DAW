@@ -19,29 +19,29 @@ header {
 	background: url('https://i.blogs.es/c76165/carteles-cine-terror/1366_2000.jpg') no-repeat center center/cover fixed;
 }
 
-header .hero .logo {
+ .caja .logo {
 	width: 20%;
 	position: relative;
 	top: 25px;
 	left: 40px;
 }
 
-header .hero .signin {
+ .caja .signin {
 	background-color: rgba(0, 0, 0, .9);
 	width: 450px;
 	color: #fff;
 	margin: 40px auto;
 	padding: 70px;
-	margin-top: 35%;
+	margin-top: 25%;
 
 }
 
-header .hero .signin h2 {
+ .caja .signin h2 {
 	margin: 0 0 25px;
 	font-size: 30px;
 }
 
-header .hero .signin input {
+.caja .signin input {
 	display: block;
 	color: #fff;
 	width: 100%;
@@ -50,7 +50,7 @@ header .hero .signin input {
 	border: none;
 }
 
-header .hero .signin input[type='text'], header .hero .signin input[type='password'] {
+.caja .signin input[type='text'],  .caja .signin input[type='password'] {
 	background-color: #353535;
 	font-size: 15px;
 	outline: none;
@@ -58,12 +58,12 @@ header .hero .signin input[type='text'], header .hero .signin input[type='passwo
 	padding: 0 20px;
 }
 
-header .hero .signin input[type='text']::placeholder, header .hero .signin input[type='password']::placeholder {
+ .caja .signin input[type='text']::placeholder, .caja .signin input[type='password']::placeholder {
 	color: #949494;
 	font-size: 16px;
 }
 
-header .hero .signin input[type='submit'] {
+ .caja .signin input[type='submit'] {
 	background-color: red;
 	font-size: 16px;
 	margin-top: 15px;
@@ -80,18 +80,19 @@ header .hero .signin input[type='submit'] {
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
 
-@media (min-width: 1300px) {
-
-	header .hero .signin {
-		margin-top: 7%;
-		
-			}
-}
 
 @media (min-width: 768px) {
 	
-	header .hero .signin {
-margin-top: 7%;
+	.caja .signin {
+margin-top: 14%;
 
-	}
+   }
+}
+
+@media (min-width: 1300px) {
+
+	 .caja .signin {
+		margin-top: 4%;
+		
+			}
 }

@@ -68,7 +68,7 @@ if (isset($_POST['modificar'])) {
 
 <body>
     <header>
-            <div class="hero">
+            <div class="caja">
                 <img src="imagenes/principal/pelismedia.png" class="logo">
 
                 <div class="signin">

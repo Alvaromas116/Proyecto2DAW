@@ -1,8 +1,16 @@
+/* ---- ----- ----- Estilos globales ----- ----- ----- */
 :root {
 	--fondo: #141414;
 	
 }
-
+* {
+	margin: 0;
+	padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+  
+  }
+  
 body {
 	background: var(--fondo);
 	font-family: 'Open Sans', sans-serif;
@@ -115,61 +123,33 @@ header {
 	vertical-align: top;
 }
 
-/* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
-	header .logotipo {
-		margin-bottom: 10px;
-		font-size: 30px;
-	}
-
-	header .contenedor {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.pelicula-principal {
-		font-size: 14px;
-	}
-
-	.pelicula-principal .descripcion {
-		max-width: 100%;
-	}
-
-}
-* {
-	margin: 0;
-	padding: 0;
-			box-sizing: border-box;
-			font-family: 'Poppins', sans-serif;
-  
-  }
-  
-  .header .hero {
-	height: 73vh;
+  header .caja {
+	height: 85vh;
 	background: url('https://i.blogs.es/c76165/carteles-cine-terror/1366_2000.jpg') no-repeat center center/cover fixed;
   }
   
-  .header .hero .logo {
+  header .caja .logo {
 	width: 13%;
 	position: relative;
 	top: 25px;
 	left: 40px;
   }
   
-  .header .hero .login {
+  header .caja .login {
 	background-color: rgba(0,0,0, 0.9);;
 	width: 450px;
 	color: #fff;
 	margin: 40px auto;
 	padding: 70px;
+	margin-top: 25%;
   }
   
-  .header .hero .login h2 {
+  header .caja .login h2 {
 	margin: 0 0 25px;
 	font-size: 30px;
   }
   
-  .header .hero .login input {
+  header .caja .login input {
 	display: block;
 	color: #fff;
 	width: 100%;
@@ -178,7 +158,7 @@ header {
 	border: none;
   }
   
-  .header .hero .login input[type='text'], .header .hero .login input[type='password'] {
+  header .caja .login input[type='text'], header .caja .login input[type='password'] {
 	background-color: #353535;
 	font-size: 15px;
 	outline: none;
@@ -186,12 +166,12 @@ header {
 	padding: 0 20px;
   }
   
-  .header .hero .login input[type='text']::placeholder, .header .hero .login input[type='password']::placeholder {
+  header .caja .login input[type='text']::placeholder, header .caja .login input[type='password']::placeholder {
 	color: #949494;
 	font-size: 16px;
   }
   
-  .header .hero .login input[type='submit'] {
+  header .caja .login input[type='submit'] {
 	background-color: red;
 	font-size: 16px;
 	margin-top: 40px;
@@ -200,25 +180,25 @@ header {
   }
   
   
-  .header .hero .login .footer-login {
+  header .caja .login .footer-login {
 	margin-top: 30px;
   }
   
-  .header .hero .login .footer-login .login {
+  header .caja .login .footer-login .login {
 	text-decoration: none;
 	color: #727272;
 	font-size: 13px;
   }
   
   
-  .header .hero .login .footer-login .new {
+  header .caja .login .footer-login .new {
 	margin-top: 12px;
 	font-size: 17px;
 	color: #727272;
 	font-weight: lighter;
   }
   
-  .header .hero .login .footer-login .new a {
+  header .caja .login .footer-login .new a {
 	color: #fff;
 	text-decoration: none;
 	margin-left: 5px;
@@ -230,5 +210,29 @@ header {
 	  color: red;
 	  text-decoration:none;
 	  
-	  
   }
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media (min-width: 768px) {
+	header .caja {
+		height: 75vh;
+	}
+	header .caja .login {
+		margin-top: 7%;
+
+   }
+@media (min-width: 1300px) {
+	header .caja {
+		height: 67vh;
+	}
+
+	header .caja .login {
+	   margin-top: 0%;
+	   
+		   }
+}
+
+
+}
+

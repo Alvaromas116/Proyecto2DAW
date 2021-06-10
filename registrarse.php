@@ -19,9 +19,9 @@ require("conexion.php");
 </head>
 
 <body>
-    <header>
+    
         <header class="header">
-            <div class="hero">
+            <div class="caja">
                 <img src="imagenes/principal/pelismedia.png" class="logo">
 
                 <div class="signin">
@@ -84,7 +84,6 @@ require("conexion.php");
                 </div>
             </div>
         </header>
-    </header>
 
     <main>
 
