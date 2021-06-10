@@ -14,8 +14,6 @@ window.addEventListener('load', function () {
     imagenes[8] = "imagenes/Login/Slider/9.png"
 	imagenes[9] = "imagenes/Login/Slider/10.jpg"
 
-
-
     var primeraImagen = 0;
     var tiempo = 1000;
 

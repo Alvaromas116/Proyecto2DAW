@@ -32,3 +32,12 @@ function removeShow() {
 tabItems.forEach(item => {
 	item.addEventListener('click', selectItem);
 });
+
+/*Con esta función al pulsar en la x del cuadro rojo nos lo cerrará*/
+   document.getElementById("equis").onclick = function(){
+    var padre = document.getElementById("cuadro").parentNode;
+    padre.removeChild(padre.children[1]);
+    document.getElementById("equis").parentNode.style.display ="none";
+
+}
+      

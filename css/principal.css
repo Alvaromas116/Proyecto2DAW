@@ -371,6 +371,26 @@ h6{
 	margin-left: 1rem;
 }
 
+#cuadro{
+	display: none;
+	color: white;
+	background-color: rgba(255, 0, 0, 0.45);
+	position: absolute;
+	box-sizing: border-box;
+	padding: 12px;
+	width: 300px;
+	float: left ;
+	text-align: center;
+	margin-left: 1%;
+	margin-top: 10%;
+	
+	
+}
+.cerrar{
+
+	float: right;
+}
+
 /* vista desde tablet */
 
 @media (min-width: 768px) {
@@ -474,5 +494,9 @@ h6{
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20rem;
 	}
+	
+#cuadro{
+	display: block;
+}
 
 }

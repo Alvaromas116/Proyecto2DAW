@@ -43,7 +43,13 @@ if (isset($_SESSION['id'])) {
 
     <header class="vista">
         <div class="vista-top">
+            
             <img src="imagenes/principal/pelismedia.png" />
+            <div id= "cuadro">
+        <span id="equis" class="cerrar">x</span>
+        <p>Bienvenido a Pelismedia</p>
+
+    </div>
             <?php
             $ahora = time();
             echo "<h6>" .date("h:i", $ahora) . "<h6 />";
@@ -215,8 +221,10 @@ if (isset($_SESSION['id'])) {
 
             </ul>
         </div>
+        
 
     </footer>
+ 
 </body>
 <script src="javascript/principal.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

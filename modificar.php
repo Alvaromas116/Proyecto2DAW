@@ -85,7 +85,7 @@ if (isset($_POST['modificar'])) {
 
                         <h6>*Es obligatorio completar todos los campos</h6>
 
-                        <input type="submit" value="Modificar" name="modificar">
+                        <input type="submit" value="Modificar" onclick="crearVentana()" name="modificar">
                     </form>
                     <?php
                     if (isset($_POST['modificar'])) {
@@ -115,6 +115,6 @@ if (isset($_POST['modificar'])) {
         </header>
 
                     
-
+<script src="javascript/modificar.js"></script>
 
 </html>
