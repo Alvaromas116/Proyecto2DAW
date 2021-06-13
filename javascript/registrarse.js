@@ -17,6 +17,8 @@ window.addEventListener('load', function () {
     var primeraImagen = 0;
     var tiempo = 1000;
 
+// ? ----- ----- Esta función cambia las imágenes de 1 en 1 en bucle ----- -----
+
     function cambiarImagenes() {
         document.slider.src = imagenes[primeraImagen];
         if (primeraImagen < 7) {

@@ -1,10 +1,13 @@
-//TMDB 
+// ? ----- ----- Obtenemos la base de datos online de peliculas (API) ----- -----
+
 
 const API_KEY = 'api_key=1cf50e6248dc270629e802686245c2c8';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
+
+// ? ----- ----- Se configura cada género con el número que le pertenece ----- -----
 
 const genres = [
     {
@@ -85,6 +88,9 @@ const genres = [
     }
   ]
 
+// ? ----- ----- Se crean todas las variables ----- -----
+
+
 const main = document.getElementById('main');
 const form =  document.getElementById('form');
 const buscar = document.getElementById('buscar');
@@ -102,6 +108,9 @@ var totalPages = 100;
 
 var selectedGenre = []
 setGenre();
+
+// ? ----- ----- Creamos los tags y los asignamos con cada género ----- -----
+
 function setGenre() {
     tagsEl.innerHTML= '';
     genres.forEach(genre => {
@@ -130,6 +139,7 @@ function setGenre() {
         tagsEl.append(t);
     })
 }
+// ? ----- ----- Indicamos que tag está seleccionado ----- -----
 
 function highlightSelection() {
     const tags = document.querySelectorAll('.tag');
@@ -145,6 +155,8 @@ function highlightSelection() {
     }
 
 }
+
+// ? ----- ----- Se crea el botón de Vaciar al pulsar en alguno de los tags ----- -----
 
 function clearBtn(){
     let clearBtn = document.getElementById('clear');
@@ -165,7 +177,7 @@ function clearBtn(){
     }
     
 }
-
+// ? ----- ----- Obtenemos las películas con la API y las configuramos en páginas ----- -----
 getMovies(API_URL);
 
 function getMovies(url) {
@@ -202,6 +214,7 @@ function getMovies(url) {
 
 }
 
+// ? ----- ----- Esta función permite aparecer cada película en la pantalla ----- -----
 
 function showMovies(data) {
     main.innerHTML = '';
@@ -238,7 +251,9 @@ function showMovies(data) {
 }
 
 const overlayContent = document.getElementById('overlay-content');
-/* Se abre cuando alguien cliquea en el elemento */
+
+/* Se abre el overlay al cliquear en una película */
+
 function openNav(movie) {
   let id = movie.id;
   fetch(BASE_URL + '/movie/'+id+'/videos?'+API_KEY).then(res => res.json()).then(videoData => {
@@ -317,6 +332,8 @@ function showVideos(){
   })
 }
 
+// ? ----- ----- Se crean las flechas para pasar página ----- -----
+
 const leftArrow = document.getElementById('left-arrow')
 const rightArrow = document.getElementById('right-arrow')
 
@@ -339,6 +356,7 @@ rightArrow.addEventListener('click', () => {
   showVideos()
 })
 
+// ? ----- ----- Se crean los colores de los votos ----- -----
 
 function getColor(vote) {
     if(vote>= 8){
@@ -349,6 +367,8 @@ function getColor(vote) {
         return 'red'
     }
 }
+
+// ? ----- ----- Se configura el buscador ----- -----
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -363,6 +383,7 @@ form.addEventListener('submit', (e) => {
     }
 
 })
+// ? ----- ----- Se configuran las páginas ----- -----
 
 prev.addEventListener('click', () => {
   if(prevPage > 0){

@@ -21,7 +21,7 @@ function removeBorder() {
 	});
 }
 
-// Elimina el subrayado del item no seleccionado
+// Elimina el la vista del item no seleccionado
 function removeShow() {
 	tabContentItems.forEach(item => {
 		item.classList.remove('show');

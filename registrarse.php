@@ -54,7 +54,7 @@ require("conexion.php");
                             if ($email != correoCorrecto($email)) {
                                 echo "<p>Email Incorrecto<p>";
                             } else {
-                                $conex = mysqli_connect("localhost", "root", "", "chat");
+                                $conex = mysqli_connect("localhost", "root", "", "pelismedia");
                                 $consulta = "INSERT INTO usuarios(nombre, email, pass) VALUES ('$nombre','$email','$pass')";
                                 $resultado = mysqli_query($conex, $consulta);
                                 header("Location:index.php?p=login");
